@@ -6,11 +6,26 @@
     */
 
     //ENTRADA
-
+    const numeroInicial = Number(prompt("Insira um número inicial"))
+    const numeroFinal = Number(prompt("Insira"))
     
     //PROCESSAMENTO
+    let numerosPares = []
+    let numerosImpares = []
 
+    if (numeroInicial >= numeroFinal) {
+        alert("Você insiriu um número inicial que é igual ou maior do que o final. /n Insira um número inicial que é menor do que o final.")
+    } else {
+        for(let i = numeroInicial + 1; i >= numeroFinal; numeroInicial++) {
+            if (i % 2 == 0) {
+                numerosPares.push(i)
+            } else {
+                numerosImpares.push(i)
+            }
+        }
+    }
     
     //SAÍDA
+    alert("Os números pares entre " + numeroInicial + " e " + numeroFinal + " são: " + numerosPares.join(", ") + "Os números impares entre " + numeroInicial + " e " + numeroFinal + " são: " + numerosImpares.join(", "))
 
 </script>

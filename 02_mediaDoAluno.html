@@ -7,11 +7,15 @@
     */
 
     //ENTRADA
-    
+    const quantidadeNotas = Number(prompt("Quantas notas o aluno teve durante o trimestre?"))
+    let notaSoma = 0
 
     //PROCESSAMENTO
+    for (let i = 1; i <= quantidadeNotas; i++) {
+        let nota = Number(prompt("Qual foi a nota do aluno? " + i + "/" + quantidadeNotas))
+        notaSoma += nota
+    }
     
-
     //SAÍDA
-
+    alert("A media das notas do aluno foi: "+ (notaSoma/quantidadeNotas).toFixed(1))
 </script>
