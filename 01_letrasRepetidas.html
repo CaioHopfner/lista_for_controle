@@ -9,20 +9,24 @@
     **Apresente apenas letras minúsculas!
     */
 
+
+    
     //ENTRADA
     let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
-    let arrayNovo = []
     
     //PROCESSAMENTO
-
-    for (let contador = 0; contador < listaDeLetras.length; contador++) {
-        let verufucador = listaDeLetras[contador]
-        if (!arrayNovo.includes(listaDeLetras[contador])){
-            arrayNovo.push(listaDeLetras[contador])
+    let letrasUnicas = [];
+    let letrasRepetidas = [];
+    for (let i = 0; i < listaDeLetras.length; i = i + 1) {
+        let letra = listaDeLetras[i].toLowerCase();
+        if (letrasUnicas.includes(letra) == false) {
+            letrasUnicas.push(letra);
+        }
+        else {
+            letrasRepetidas.push(letra);
         }
     }
-    alert(arrayNovo)
     
     //SAÍDA
-
+    document.write(`As letras que se repetem são ${letrasRepetidas.sort().join(", ")}`);
 </script>

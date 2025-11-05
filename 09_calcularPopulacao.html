@@ -6,11 +6,19 @@
     */
 
     //ENTRADA
-
+    let anos5 = 50000
+    let anos10 = 50000
     
     //PROCESSAMENTO
+    for(let i = 1; i <= 10; i++) {
+        if (i <= 5) {
+            anos5 = anos5*1.015
+        }
+        anos10 = anos10*1.015
+    }
     
 
     //SAÍDA
+    alert("A estimativa para daqui a 5 anos é: " + anos5.toFixed(0) + "\n Enquanto a estimativa para daqui a 10 anos é: " + anos10.toFixed(0))
 
 </script>
